@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdaptiveWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,91 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spU-ng-xcc" userLabel="TextContainer">
+                                <rect key="frame" x="0.0" y="237" width="600" height="363"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="04J-cZ-k0A">
+                                        <rect key="frame" x="-7" y="10" width="614" height="177"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="1" y="10" width="300" height="177"/>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="90"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="28C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="23r-I1-onS">
+                                        <rect key="frame" x="73" y="58" width="454" height="295"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="250"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="23r-I1-onS" firstAttribute="centerX" secondItem="spU-ng-xcc" secondAttribute="centerX" id="D7O-h5-k27"/>
+                                    <constraint firstItem="23r-I1-onS" firstAttribute="width" secondItem="spU-ng-xcc" secondAttribute="width" id="R29-ts-LCT"/>
+                                    <constraint firstAttribute="bottom" secondItem="23r-I1-onS" secondAttribute="bottom" constant="10" id="WCQ-dV-Ewp"/>
+                                    <constraint firstItem="04J-cZ-k0A" firstAttribute="width" secondItem="spU-ng-xcc" secondAttribute="width" id="rfB-Wu-2Nr"/>
+                                    <constraint firstItem="04J-cZ-k0A" firstAttribute="top" secondItem="spU-ng-xcc" secondAttribute="top" constant="10" id="udy-xH-y6T"/>
+                                    <constraint firstItem="04J-cZ-k0A" firstAttribute="centerX" secondItem="spU-ng-xcc" secondAttribute="centerX" id="yLw-9l-lu1"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloud" translatesAutoresizingMaskIntoConstraints="NO" id="W6b-jM-AV5">
+                                <rect key="frame" x="150" y="20" width="300" height="197"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.6705882352941176" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="spU-ng-xcc" firstAttribute="top" secondItem="W6b-jM-AV5" secondAttribute="bottom" constant="20" id="22Y-sB-YmK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="spU-ng-xcc" secondAttribute="bottom" id="29K-4Q-4hf"/>
+                            <constraint firstItem="W6b-jM-AV5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Ai-E3-lms"/>
+                            <constraint firstItem="W6b-jM-AV5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="95X-FG-NN5"/>
+                            <constraint firstItem="spU-ng-xcc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Eer-JA-h5g"/>
+                            <constraint firstAttribute="trailing" secondItem="spU-ng-xcc" secondAttribute="trailing" id="FNI-7U-i3M"/>
+                            <constraint firstItem="W6b-jM-AV5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="GQu-Hw-ebA"/>
+                            <constraint firstItem="W6b-jM-AV5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HBJ-Yf-9S7"/>
+                            <constraint firstItem="W6b-jM-AV5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ahA-2X-Ud0"/>
+                            <constraint firstItem="W6b-jM-AV5" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="bU4-J3-H4y"/>
+                            <constraint firstItem="spU-ng-xcc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hf2-IH-Ipd"/>
+                            <constraint firstItem="spU-ng-xcc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lho-TX-dJZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Ai-E3-lms"/>
+                                <exclude reference="GQu-Hw-ebA"/>
+                                <exclude reference="ahA-2X-Ud0"/>
+                                <exclude reference="Eer-JA-h5g"/>
+                                <exclude reference="lho-TX-dJZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="8Ai-E3-lms"/>
+                                <exclude reference="95X-FG-NN5"/>
+                                <include reference="GQu-Hw-ebA"/>
+                                <exclude reference="HBJ-Yf-9S7"/>
+                                <include reference="ahA-2X-Ud0"/>
+                                <exclude reference="bU4-J3-H4y"/>
+                                <exclude reference="22Y-sB-YmK"/>
+                                <include reference="Eer-JA-h5g"/>
+                                <exclude reference="hf2-IH-Ipd"/>
+                                <include reference="lho-TX-dJZ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cloud" width="300" height="197"/>
+    </resources>
 </document>
